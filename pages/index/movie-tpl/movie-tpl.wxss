@@ -1,0 +1,23 @@
+/* pages/movies/movies.wxss */
+@import "../stars-tpl/stars-tpl.wxss";
+
+.movie-ctn {
+  display: flex;
+  flex-direction: column;
+  padding: 0 22rpx 20rpx;
+}
+
+.movie-img {
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movie-title {
+  width: 200rpx;
+  margin-bottom: 10rpx;
+  font-size: 22rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

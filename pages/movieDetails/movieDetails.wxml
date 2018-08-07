@@ -1,0 +1,60 @@
+<!--pages/movieDetails/movieDetails.wxml-->
+<view class='details-ctn'>
+  <view class='details-header'>
+    <view class='bg-ctn'>
+      <image src='{{detailsData.images.medium}}' class='bg-img'></image>
+    </view>
+    <view class='header-cover'></view>
+    <view class='header-main'>
+      <image src='{{detailsData.images.small}}' class='poster'></image>
+      <view class='movie-title'>
+        <view>
+          <text class='name'>{{detailsData.title}}</text>
+        </view>
+        <view class='rating'>
+          <view class='rating-num'>
+            {{detailsData.rating.average}}
+          </view>
+          <view>
+            <view class='rating-star'>
+              <view>
+                <block wx:for="{{[10, 20, 30, 40 ,50]}}">
+                  <image wx:if="{{detailsData.rating.stars - item >= 0}}" src='/images/icon/star.png'></image>
+                  <image wx:if="{{detailsData.rating.stars - item == -5}}" src='/images/icon/half-star.png'></image>
+                  <image wx:if="{{detailsData.rating.stars - item <= -10}}" src='/images/icon/none-star.png'></image>
+                </block>
+              </view>
+            </view>
+            <view class='ratings-count'>
+              {{detailsData.ratings_count}}人评价
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='movie-msg'>
+    <view>
+      <text wx:for="{{detailsData.durations}}">{{item}}</text>
+      <text wx:for="{{detailsData.genres}}">{{item}}</text>
+    </view>
+    <view>
+      <text>{{detailsData.pubdates}}上映</text>
+      <text wx:for="{{detailsData.countries}}">{{item}}</text>
+    </view>
+    <view>
+      <text wx:for="{{detailsData.directors}}">{{item.name}}(导演)</text>
+      <text wx:for="{{detailsData.casts}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view class='wish'>
+     <view>{{detailsData.wish_count}}人想看</view>
+     <view>{{detailsData.collect_count}}人看过</view>
+  </view>
+  <view class='summary'>
+    <view class='summary-title'>{{detailsData.title}}的剧情简介</view>
+    <text>
+      {{detailsData.summary}}
+    </text>
+  </view>
+</view>

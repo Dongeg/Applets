@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userCenter/user",
+    "pages/movieDetails/movieDetails",
+    "pages/more-list/more-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#67ba62",
+    "navigationBarTitleText": "douban电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aeaeae",
+    "selectedColor": "#67ba62",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "images/icon/movie.png",
+        "selectedIconPath": "images/icon/movie-select.png"
+      },
+      {
+        "pagePath": "pages/userCenter/user",
+        "text": "我的",
+        "iconPath": "images/icon/my.png",
+        "selectedIconPath": "images/icon/my-select.png"
+      }
+    ]
+  }
+}

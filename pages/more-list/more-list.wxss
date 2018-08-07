@@ -1,0 +1,8 @@
+/* pages/more-list/more-list.wxss */
+@import "../index/movie-tpl/movie-tpl.wxss";
+.more-ctn {
+  padding: 15rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

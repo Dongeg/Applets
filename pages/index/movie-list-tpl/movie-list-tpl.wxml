@@ -1,0 +1,24 @@
+<!--pages/index/movie-list-tpl/movie-list-tpl.wxml-->
+<import src="../movie-tpl/movie-tpl.wxml" />
+<template name="movieListTemplate">
+  <view class='movie-list-ctn'>
+    <view class='inner-ctn'>
+      <view class='movie-head'>
+        <view>
+          <text class='slogan'>{{title}}</text>
+        </view>
+        <view class='more' bindtap="toMoreList" data-type='{{type}}'>
+          <text class='more-text'>更多</text>
+          <image class='more-img' src='/images/icon/arrow-right.png'></image>
+        </view>
+      </view>
+      <scroll-view scroll-x scroll-with-animation class='scrollview'>
+        <view class='movies-ctn'>
+          <block wx:for="{{subjects}}" wx:for-item="movie" wx:key="movie.id">
+            <template is="movieTemplate" data="{{...movie}}" />
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

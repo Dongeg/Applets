@@ -1,0 +1,16 @@
+<!--pages/stars/stars.wxml-->
+<template name="starsTemplate">
+  <view class='stars-ctn'>
+    <view class='stars'>
+      <block wx:for="{{[10, 20, 30, 40 ,50]}}">
+        <image wx:if="{{stars - item >= 0}}" src='/images/icon/star.png'></image>
+        <image wx:if="{{stars - item == -5}}" src='/images/icon/half-star.png'></image>
+        <image wx:if="{{stars - item <= -10}}" src='/images/icon/none-star.png'></image>
+      </block>
+    </view>
+    <view class='star-score'>
+      <text wx:if="{{average == 0}}">暂无评分</text>
+      <text wx:else>{{average}}</text>
+    </view>
+  </view>
+</template>

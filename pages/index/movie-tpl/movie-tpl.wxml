@@ -1,0 +1,9 @@
+<!--pages/movies/movies.wxml-->
+<import src="../stars-tpl/stars-tpl.wxml" /> 
+<template name="movieTemplate">
+  <view class='movie-ctn' bindtap="toDetails" data-id='{{id}}'>
+    <image class='movie-img' src='{{images.small}}'></image>
+    <text class='movie-title'>{{title}}</text>
+    <template is="starsTemplate" data="{{average:rating.average,stars:rating.stars}}" />
+  </view>
+</template>
