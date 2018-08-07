@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/userCenter/user",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/userCenter/user",
     "pages/movieDetails/movieDetails",
     "pages/more-list/more-list"
   ],

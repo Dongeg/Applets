@@ -5,31 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    isGetUserInfo:true,
+    userInfo:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.showModal({
-    //   title: '提示',
-    //   content: '是否公开你的昵称和头像',
-    //   success: function (res) {
-    //     if (res.confirm) {
-    //       console.log('用户点击确定')
-    //       wx.getUserInfo({
-    //         success: function (res) {
-    //           console.log(res.userInfo)
-    //         }
-    //       })
-    //     } else if (res.cancel) {
-    //       console.log('用户点击取消')
-    //     }
-    //   }
-    // })
+    this.getInfo();
   },
-  
+  // 查看是否授权
+  getInfo:function(){
+    var that = this;
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res.userInfo);
+              that.setData({
+                userInfo: res.userInfo,
+                isGetUserInfo:true
+              })
+            }
+          })
+        }
+        else {
+          that.setData({
+            isGetUserInfo: false
+          })
+        }
+      }
+    })
+  },
   bindGetUserInfo: function (e) {
     console.log(e.detail.userInfo)
   },

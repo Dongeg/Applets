@@ -1,5 +1,30 @@
 <!--pages/userCenter/user.wxml-->
 <view>
-
+  <view class='getInfoCtn' wx:if="{{!isGetUserInfo}}">
+    <view>
+      <image class='icon' src='/images/icon/userInfo.png'></image>
+    </view>
+    <view class='msg'>此操作需要授权获取用户信息（昵称，头像等）是否进行授权？</view>
+    <button type="primary" size="default" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确定</button>
+    <button type="default" size="default">取消</button>
+  </view>
+  <view class='userInfo'>
+      <view>
+        <!-- <text class='loginout'>退出</text> -->
+        <image class='user-header' src='{{userInfo.avatarUrl}}'></image>
+      </view>
+      <view class='user-name'>{{userInfo.nickName}}</view>
+  </view>
+  <view>
+  <view wx:if="{{userInfo.gender == 1}}">
+    <image class='icon' src='/images/movie/xjj.jpg'></image>
+    <text>小姐姐，小姐姐，给你个东西你要不要，包邮到{{userInfo.city}}喔</text>
+  </view>
+  <view wx:if="{{userInfo.gender == 2}}">
+      <image class='icon' src='/images/movie/xjj.jpg'></image>
+  </view>
+    <view wx:if="{{userInfo.gender == 0}}">
+  
+  </view>
+  </view>
 </view>
-
