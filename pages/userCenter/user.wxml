@@ -9,22 +9,24 @@
     <button type="default" size="default">取消</button>
   </view>
   <view class='userInfo'>
+    <view>
+      <!-- <text class='loginout'>退出</text> -->
+      <image class='user-header' src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='user-name'>{{userInfo.nickName}}</view>
+  </view>
+  <view class='user-content'>
+    <view wx:if="{{userInfo.gender == 1}}" class='xjj'>
       <view>
-        <!-- <text class='loginout'>退出</text> -->
-        <image class='user-header' src='{{userInfo.avatarUrl}}'></image>
+        <image class='bqb' src='/images/movie/xjj.jpg'></image>
       </view>
-      <view class='user-name'>{{userInfo.nickName}}</view>
-  </view>
-  <view>
-  <view wx:if="{{userInfo.gender == 1}}">
-    <image class='icon' src='/images/movie/xjj.jpg'></image>
-    <text>小姐姐，小姐姐，给你个东西你要不要，包邮到{{userInfo.city}}喔</text>
-  </view>
-  <view wx:if="{{userInfo.gender == 2}}">
+      <view class='xjj-text'>小姐姐，小姐姐，给你个东西你要不要，包邮到{{userInfo.city}}喔</view>
+    </view>
+    <view wx:if="{{userInfo.gender == 2}}">
       <image class='icon' src='/images/movie/xjj.jpg'></image>
-  </view>
+    </view>
     <view wx:if="{{userInfo.gender == 0}}">
-  
-  </view>
+
+    </view>
   </view>
 </view>

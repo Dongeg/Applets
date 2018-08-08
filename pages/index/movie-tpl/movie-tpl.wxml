@@ -1,6 +1,12 @@
 <!--pages/movies/movies.wxml-->
 <import src="../stars-tpl/stars-tpl.wxml" /> 
 <template name="movieTemplate">
+  <!--
+    小程序中的事件不可以像vue一样直接传参，
+    要在事件绑定节点上通过data-绑定数据，
+    js中通过event对象获取 
+    data-自定义标示 为要传递的参数 
+  -->
   <view class='movie-ctn' bindtap="toDetails" data-id='{{id}}'>
     <image class='movie-img' src='{{images.small}}'></image>
     <text class='movie-title'>{{title}}</text>
