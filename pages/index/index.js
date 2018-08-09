@@ -1,6 +1,5 @@
 //index.js
 //获取应用实例
-var util = require('../../utils/util.js');
 var QQMapWX  = require('../../utils/qqmap-wx-jssdk.js');
 var qqmapsdk = null;
 const app = getApp();

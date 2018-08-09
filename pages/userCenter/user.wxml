@@ -20,13 +20,19 @@
       <view>
         <image class='bqb' src='/images/movie/xjj.jpg'></image>
       </view>
-      <view class='xjj-text'>小姐姐，小姐姐，给你个东西你要不要，包邮到{{userInfo.city}}喔</view>
+      <view class='xjj-text'>嗯嗯。。其实你登录了也没什么卵用</view>
     </view>
-    <view wx:if="{{userInfo.gender == 2}}">
-      <image class='icon' src='/images/movie/xjj.jpg'></image>
+    <view wx:if="{{userInfo.gender == 2}}" class='xjj'>
+      <view>
+        <image class='bqb' src='/images/movie/xjj.jpg'></image>
+      </view>
+      <view class='xjj-text'>小姐姐，小姐姐，给你个东西你要不要，包邮到{{city}}喔</view>
     </view>
-    <view wx:if="{{userInfo.gender == 0}}">
-
+    <view wx:if="{{userInfo.gender == 0}}" class='xjj'>
+      <view>
+        <image class='bqb' src='/images/movie/xjj.jpg'></image>
+      </view>
+      <view class='xjj-text'>嗯嗯。。辣个，请问你是蓝孩纸还是铝孩纸？</view>
     </view>
   </view>
 </view>

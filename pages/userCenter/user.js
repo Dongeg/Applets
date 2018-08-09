@@ -1,4 +1,5 @@
 // pages/userCenter/user.js
+const app = getApp();
 Page({
 
   /**
@@ -7,6 +8,7 @@ Page({
   data: {
     isGetUserInfo:true,
     userInfo:{},
+    city:app.city,
   },
 
   /**

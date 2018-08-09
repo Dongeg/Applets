@@ -1,0 +1,14 @@
+/* pages/component/searchBtn/searchBtn.wxss */
+.searchBtnCtn {
+  padding: 15rpx;
+  background: #67ba62;
+}
+.search-btn {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius:15rpx; 
+  font-size: 28rpx;
+  background: #fff;
+  color: #aaa;
+}

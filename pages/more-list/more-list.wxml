@@ -1,7 +1,10 @@
 <!--pages/more-list/more-list.wxml-->
-<import src="../index/movie-tpl/movie-tpl.wxml" />
-<view class='more-ctn'>
-  <block wx:for="{{moreData}}" wx:for-item="movie" wx:key="movie.id">
-    <template is="movieTemplate" data="{{...movie}}" />
-  </block>
+<import src="../../tpl/movie-tpl/movie-tpl.wxml" />
+<view>
+  <search-btn></search-btn>
+  <view class='more-ctn'>
+    <block wx:for="{{moreData}}" wx:for-item="movie" wx:key="movie.id">
+      <template is="movieTemplate" data="{{...movie}}" />
+    </block>
+  </view>
 </view>

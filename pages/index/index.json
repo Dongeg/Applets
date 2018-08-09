@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "search-btn": "../../components/searchBtn/searchBtn"
+  }
+}

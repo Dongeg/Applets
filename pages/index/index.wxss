@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import "./movie-list-tpl/movie-list-tpl.wxss";
+@import "../../tpl/movie-list-tpl/movie-list-tpl.wxss";
 .container {
   background-color: #f2f2f2;
 }

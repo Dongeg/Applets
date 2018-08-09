@@ -1,6 +1,8 @@
 <!--index.wxml-->
-<import src="movie-list-tpl/movie-list-tpl.wxml" /> 
+<import src="../../tpl/searchBtn-tpl/searchBtn-tpl.wxml" /> 
+<import src="../../tpl/movie-list-tpl/movie-list-tpl.wxml" /> 
 <view class="container">
+  <search-btn></search-btn>
   <view class="movies-template">
     <template is="movieListTemplate" data="{{...inTheaters}}"/>
   </view>

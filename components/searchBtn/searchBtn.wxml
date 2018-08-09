@@ -1,0 +1,6 @@
+<!--pages/component/searchBtn/searchBtn.wxml-->
+<view>
+  <view class='searchBtnCtn'>
+    <view class='search-btn' catchtap='toSearchPage'><icon type='search' size='14'></icon>  搜索</view>
+  </view>
+</view> 
