@@ -8,3 +8,6 @@ text{
 input{
     font-family: MicroSoft YaHei;
 }
+view {
+  box-sizing: border-box;
+}

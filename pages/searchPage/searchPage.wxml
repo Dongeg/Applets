@@ -1,2 +1,27 @@
 <!--pages/searchPage/searchPage.wxml-->
-<text>pages/searchPage/searchPage.wxml</text>
+<view>
+  <view class='search-input-ctn'>
+    <view class='search-input'>
+      <view class='search-icon'>
+        <icon type='search' size='14'></icon>
+      </view>
+      <input placeholder='搜索' focus='true' confirm-type='搜索' bindinput="getkey" bindconfirm="getSearchResult"></input>
+    </view>
+    <view class='cancel' catchtap='back'>取消</view>
+  </view>
+  <view class='data-ctn'>
+    <view class='data-item' wx:for="{{searchResult}}" catchtap='toDetails' data-id='{{item.id}}'>
+    <view style='height:230rpx;'>
+     <image src='{{item.images.small}}'></image>
+    </view>
+      <view class='data-msg'>
+        <view class='data-title'>{{item.title}}</view>
+        <view class='data-dir'>
+          <text>{{item.rating.average}}分</text>
+          <text wx:for="{{item.genres}}">{{item}}</text>
+          <text wx:for="{{item.durations}}">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
