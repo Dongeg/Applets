@@ -5,15 +5,26 @@
       <view class='search-icon'>
         <icon type='search' size='14'></icon>
       </view>
-      <input placeholder='搜索' focus='true' confirm-type='搜索' bindinput="getkey" bindconfirm="getSearchResult"></input>
+      <input placeholder='搜索' focus='true' confirm-type='搜索' bindinput="getkey" bindconfirm="getSearchResult" value='{{key}}'></input>
     </view>
     <view class='cancel' catchtap='back'>取消</view>
   </view>
+  <view class='histroy' wx:if='{{isShowHistroy}}'>
+    <view class='histroy-header'>
+      <view>历史纪录</view>
+      <view catchtap='clearHistroy'>清除</view>
+    </view>
+    <view>
+      <view class='histroy-item' wx:for='{{histroy}}' catchtap='usehistroy' data-val='{{item}}'>
+        {{item}}
+      </view>
+    </view>
+  </view>
   <view class='data-ctn'>
     <view class='data-item' wx:for="{{searchResult}}" catchtap='toDetails' data-id='{{item.id}}'>
-    <view style='height:230rpx;'>
-     <image src='{{item.images.small}}'></image>
-    </view>
+      <view style='height:230rpx;'>
+        <image src='{{item.images.small}}'></image>
+      </view>
       <view class='data-msg'>
         <view class='data-title'>{{item.title}}</view>
         <view class='data-dir'>

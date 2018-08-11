@@ -1,7 +1,7 @@
 //app.js
 App({
   baseUrl: 'https://douban.uieee.com',
-  city:'广州',
+  city:'',
   getData:function(obj){
     wx.request({
       url: this.baseUrl + obj.url,

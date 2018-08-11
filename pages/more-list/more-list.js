@@ -27,17 +27,23 @@ Page({
     var that = this;
     var type = options.type;
     var url = '';
+    var title ='';
     if (type == 1) {
-      url = '/v2/movie/in_theaters'
+      url = '/v2/movie/in_theaters';
       that.data.param.city = app.city
+      title = '正在上映';
     }
     else if (type == 2){
-      url = '/v2/movie/coming_soon'
+      url = '/v2/movie/coming_soon';
+      title = '即将上映';
     }
     else if (type == 3){
-      url = '/v2/movie/top250'
+      url = '/v2/movie/top250';
+      title = 'top250';
     }
-    
+    wx.setNavigationBarTitle({
+      title: title,
+    })
     that.setData({
       url:url,
     })
@@ -91,7 +97,14 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'menu') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '分享',
+      path: '/page/index/index'
+    }
   }
 })

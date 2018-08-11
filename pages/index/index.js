@@ -13,8 +13,8 @@ Page({
   onLoad: function () {
     this.getTop250();
     this.getComingSoon();
-    this.getInTheaters('广州')
-    // this.getUserLocation();
+    // this.getInTheaters('广州')
+    this.getUserLocation();
   },
   // 获取用户位置
   getUserLocation: function () {
@@ -107,4 +107,15 @@ Page({
       }
     })
   },
+  onShareAppMessage: function (res) {
+    if (res.from === 'menu') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '豆瓣电影',
+      path: '/page/index/index',
+      imageUrl:'/images/movie/xjj.jpg'
+    }
+  }
 })

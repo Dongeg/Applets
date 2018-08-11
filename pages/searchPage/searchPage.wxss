@@ -68,3 +68,23 @@
 .data-dir text {
   margin-right: 10rpx;
 }
+.histroy-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 42rpx;
+  height: 70rpx;
+  background-color: #f9f9f9;
+  font-size: 30rpx;
+  color: #9d9d9d;
+}
+.histroy-header view { 
+  line-height: 70rpx;
+}
+.histroy-item {
+  height: 90rpx;
+  padding-left:42rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #f9f9f9;
+  font-size: 28rpx;
+  color: #747474;
+}

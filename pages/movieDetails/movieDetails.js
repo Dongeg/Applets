@@ -27,7 +27,9 @@ Page({
         that.setData({
           detailsData: res.data
         })
-
+        wx.setNavigationBarTitle({
+          title: res.data.title
+        })
       }
     })
   },
